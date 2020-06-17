@@ -47,7 +47,11 @@
                     placeholder="Search for a City"
                   />
                 </div>
-                <button id="run-search" type="submit" class="btn btn-dark btn-lg mb-2">
+                <button
+                  id="run-search"
+                  type="submit"
+                  class="btn btn-dark btn-lg mb-2"
+                >
                   Search
                   <svg
                     class="bi bi-search"
@@ -83,71 +87,41 @@
         </div>
         <div class="col-sm-8">
           <div class="card">
-            <div class="card-body" id="city-info">
-              <!-- <h1 id="selected-city">Atlanta 6-16-2020</h1> -->
-     <!--          <hr />
-              <br />
-              <h2>Temperature:</h2>
-              <br />
-              <h2>Humidity:</h2>
-              <br />
-              <h2>Wind Speed:</h2>
-              <br />
-              <h2>UV Index:</h2>
-              <br /> -->
-            </div>
+            <div class="card-body" id="city-info"></div>
           </div>
+          <br />
+          <h1>5 Day Forecast:</h1>
 
           <div class="card-deck">
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
               <div class="card-header">Header</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+                <p id="day-one" class="card-text"></p>
               </div>
             </div>
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
               <div class="card-header">Header</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+                <p id="day-two" class="card-text"></p>
               </div>
             </div>
 
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
               <div class="card-header">Header</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+                <p id="day-three" class="card-text"></p>
               </div>
             </div>
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
               <div class="card-header">Date: 6/16/20</div>
               <div class="card-body">
-                <h5 class="card-title">Temp:</h5>
-                <br />
-                <p class="card-text">
-                  Humidity:
-                </p>
+                <p id="day-four" class="card-text"></p>
               </div>
             </div>
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
               <div class="card-header">Header</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+                <p id="day-five" class="card-text"></p>
               </div>
             </div>
           </div>
