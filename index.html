@@ -47,7 +47,7 @@
                     placeholder="Search for a City"
                   />
                 </div>
-                <button type="submit" class="btn btn-dark btn-lg mb-2">
+                <button id="run-search" type="submit" class="btn btn-dark btn-lg mb-2">
                   Search
                   <svg
                     class="bi bi-search"
@@ -83,9 +83,9 @@
         </div>
         <div class="col-sm-8">
           <div class="card">
-            <div class="card-body">
-              <h1 id="selected-city">Atlanta 6-16-2020</h1>
-              <hr />
+            <div class="card-body" id="city-info">
+              <!-- <h1 id="selected-city">Atlanta 6-16-2020</h1> -->
+     <!--          <hr />
               <br />
               <h2>Temperature:</h2>
               <br />
@@ -94,7 +94,7 @@
               <h2>Wind Speed:</h2>
               <br />
               <h2>UV Index:</h2>
-              <br />
+              <br /> -->
             </div>
           </div>
 
@@ -154,5 +154,8 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
