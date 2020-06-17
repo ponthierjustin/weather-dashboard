@@ -42,12 +42,17 @@ $(document).ready(function () {
         var dayThree = $("<p>").text("Temperature: " + response.daily[3].temp.day);
         var dayFour = $("<p>").text("Temperature: " + response.daily[4].temp.day);
         var dayFive = $("<p>").text("Temperature: " + response.daily[5].temp.day);
+        var dayOneH = $("<p>").text("Humidity: " + response.daily[1].humidity + "%");
+        var dayTwoH = $("<p>").text("Humidity: " + response.daily[2].humidity + "%");
+        var dayThreeH = $("<p>").text("Humidity: " + response.daily[3].humidity + "%");
+        var dayFourH = $("<p>").text("Humidity: " + response.daily[4].humidity + "%");
+        var dayFiveH = $("<p>").text("Humidity: " + response.daily[5].humidity + "%");
 
-        $("#day-one").append(dayOne);
-        $("#day-two").append(dayTwo);
-        $("#day-three").append(dayThree);
-        $("#day-four").append(dayFour);
-        $("#day-five").append(dayFive);
+        $("#day-one").append(dayOne, dayOneH);
+        $("#day-two").append(dayTwo, dayTwoH);
+        $("#day-three").append(dayThree, dayThreeH);
+        $("#day-four").append(dayFour, dayFourH);
+        $("#day-five").append(dayFive, dayFiveH);
         $("#city-info").append(
           CurrentCity,
           currentTemp,
