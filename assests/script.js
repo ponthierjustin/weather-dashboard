@@ -13,15 +13,15 @@ $(document).ready(function () {
 
       let today = moment().format("MMMM Do YYYY");
       console.log(today);
-      let tomorrow = moment().add(1, "days").format("MMMM Do YYYY");
+      let tomorrow = moment().add(1, "days").format("L");
       console.log(tomorrow);
-      let tomorrow2 = moment().add(2, "days").format("MMMM Do YYYY");
+      let tomorrow2 = moment().add(2, "days").format("L");
       console.log(tomorrow2);
-      let tomorrow3 = moment().add(3, "days").format("MMMM Do YYYY");
+      let tomorrow3 = moment().add(3, "days").format("L");
       console.log(tomorrow3);
-      let tomorrow4 = moment().add(4, "days").format("MMMM Do YYYY");
+      let tomorrow4 = moment().add(4, "days").format("L");
       console.log(tomorrow4);
-      let tomorrow5 = moment().add(5, "days").format("MMMM Do YYYY");
+      let tomorrow5 = moment().add(5, "days").format("L");
       console.log(tomorrow5);
 
       var CurrentCity = $("<h1>").text(response.name + ": " + today);
@@ -48,8 +48,10 @@ $(document).ready(function () {
         url: queryURL1,
         method: "GET",
       }).then(function (response) {
+        console.log(response);
         var uVindex = $("<h3>").text("UV Index: " + response.current.uvi);
-
+        var getIcon = response.daily[2].weather[0].icon;
+        var getURL = "http://openweathermap.org/img/w/" + getIcon + ".png"
         var dayOne = $("<p>").text("Temperature: " + response.daily[1].temp.day + "°F " + "Humidity: " + response.daily[1].humidity + "%");
         var dayTwo = $("<p>").text("Temperature: " + response.daily[2].temp.day + "°F " + "Humidity: " + response.daily[2].humidity + "%");
         var dayThree = $("<p>").text("Temperature: " + response.daily[3].temp.day + "°F " + "Humidity: " + response.daily[3].humidity + "%");
