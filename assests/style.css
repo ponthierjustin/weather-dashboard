@@ -1,0 +1,17 @@
+.card {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.navbar {
+  box-shadow: 0 10px 10px rgba(133, 52, 103, 0.7);
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+}
+
+.col-sm-4{
+    margin-top: 60px;
+}

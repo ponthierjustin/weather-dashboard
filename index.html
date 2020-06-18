@@ -9,13 +9,13 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assests/style.css" />
     <link
       rel="icon"
       type="image"
       href="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2020-05-25/7066ae3930686bd1c7ac43122f35be40.ico.png"
     />
-    <title>Weather</title>
+    <title>Weather Dashboard</title>
   </head>
   <header>
     <nav class="navbar navbar-dark bg-dark">
@@ -33,7 +33,7 @@
             d="M3.5 13a3.5 3.5 0 1 1 .59-6.95 5.002 5.002 0 1 1 9.804 1.98A2.5 2.5 0 0 1 13.5 13h-10z"
           />
         </svg>
-        Weather
+        Weather Dashboard
       </span>
     </nav>
   </header>
@@ -41,53 +41,51 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-4">
-          <div class="card" style="background-color: #eee;">
-            <div class="card-header">
-              <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
-                  <input
-                    type="text"
-                    class="form-control-lg"
-                    id="search-city"
-                    placeholder="Search for a City"
-                  />
-                </div>
-                <button
-                  id="run-search"
-                  type="submit"
-                  class="btn btn-dark btn-lg mb-2"
-                >
-                  Search
-                  <svg
-                    class="bi bi-search"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
-                    />
-                  </svg>
-                </button>
-              </form>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Atlanta</li>
-                <li class="list-group-item">Houston</li>
-                <li class="list-group-item">Seattle</li>
-                <li class="list-group-item">Washington</li>
-                <li class="list-group-item">Savannah</li>
-                <li class="list-group-item">New York</li>
-                <li class="list-group-item">Buffalo</li>
-                <li class="list-group-item">Austin</li>
-              </ul>
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <input
+                type="text"
+                class="form-control-lg"
+                id="search-city"
+                placeholder="Search for a City"
+              />
             </div>
+            <button
+              id="run-search"
+              type="submit"
+              class="btn btn-dark btn-lg mb-2"
+            >
+              Search
+              <svg
+                class="bi bi-search"
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                />
+              </svg>
+            </button>
+          </form>
+          <div class="card" style="background-color: #eee;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Atlanta</li>
+              <li class="list-group-item">Houston</li>
+              <li class="list-group-item">Seattle</li>
+              <li class="list-group-item">Washington</li>
+              <li class="list-group-item">Savannah</li>
+              <li class="list-group-item">New York</li>
+              <li class="list-group-item">Buffalo</li>
+              <li class="list-group-item">Austin</li>
+            </ul>
           </div>
         </div>
         <div class="col-sm-8">
@@ -99,32 +97,32 @@
 
           <div class="card-deck">
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
-              <div class="card-header">Header</div>
+              <div id="date-one" class="card-header"></div>
               <div class="card-body">
                 <p id="day-one" class="card-text"></p>
               </div>
             </div>
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
-              <div class="card-header">Header</div>
+              <div id="date-two" class="card-header"></div>
               <div class="card-body">
                 <p id="day-two" class="card-text"></p>
               </div>
             </div>
 
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
-              <div class="card-header">Header</div>
+              <div id="date-three" class="card-header"></div>
               <div class="card-body">
                 <p id="day-three" class="card-text"></p>
               </div>
             </div>
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
-              <div class="card-header">Date: 6/16/20</div>
+              <div id="date-four" class="card-header"></div>
               <div class="card-body">
                 <p id="day-four" class="card-text"></p>
               </div>
             </div>
             <div class="card text-white bg-dark mb-3" style="max-width: 15rem;">
-              <div class="card-header">Header</div>
+              <div id="date-five" class="card-header"></div>
               <div class="card-body">
                 <p id="day-five" class="card-text"></p>
               </div>
@@ -133,8 +131,10 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+
+    <script src="assests/script.js"></script>
   </body>
 </html>
