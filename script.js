@@ -11,8 +11,23 @@ $(document).ready(function () {
     }).then(function (response) {
       console.log(response);
 
-      var CurrentCity = $("<h1>").text(response.name);
-      var currentTemp = $("<h3>").text("Temperature: " + response.main.temp + "°F");
+      let today = moment().format("MMMM Do YYYY");
+      console.log(today);
+      let tomorrow = moment().add(1, "days").format("MMMM Do YYYY");
+      console.log(tomorrow);
+      let tomorrow2 = moment().add(2, "days").format("MMMM Do YYYY");
+      console.log(tomorrow2);
+      let tomorrow3 = moment().add(3, "days").format("MMMM Do YYYY");
+      console.log(tomorrow3);
+      let tomorrow4 = moment().add(4, "days").format("MMMM Do YYYY");
+      console.log(tomorrow4);
+      let tomorrow5 = moment().add(5, "days").format("MMMM Do YYYY");
+      console.log(tomorrow5);
+
+      var CurrentCity = $("<h1>").text(response.name + ": " + today);
+      var currentTemp = $("<h3>").text(
+        "Temperature: " + response.main.temp + "°F"
+      );
 
       var currentHumidity = $("<h3>").text(
         "Humidity: " + response.main.humidity + "%"
@@ -33,26 +48,23 @@ $(document).ready(function () {
         url: queryURL1,
         method: "GET",
       }).then(function (response) {
-        console.log(response);
-
         var uVindex = $("<h3>").text("UV Index: " + response.current.uvi);
 
-        var dayOne = $("<p>").text("Temperature: " + response.daily[1].temp.day + "°F");
-        var dayTwo = $("<p>").text("Temperature: " + response.daily[2].temp.day + "°F");
-        var dayThree = $("<p>").text("Temperature: " + response.daily[3].temp.day + "°F");
-        var dayFour = $("<p>").text("Temperature: " + response.daily[4].temp.day + "°F");
-        var dayFive = $("<p>").text("Temperature: " + response.daily[5].temp.day + "°F");
-        var dayOneH = $("<p>").text("Humidity: " + response.daily[1].humidity + "%");
-        var dayTwoH = $("<p>").text("Humidity: " + response.daily[2].humidity + "%");
-        var dayThreeH = $("<p>").text("Humidity: " + response.daily[3].humidity + "%");
-        var dayFourH = $("<p>").text("Humidity: " + response.daily[4].humidity + "%");
-        var dayFiveH = $("<p>").text("Humidity: " + response.daily[5].humidity + "%");
-
-        $("#day-one").append(dayOne, dayOneH);
-        $("#day-two").append(dayTwo, dayTwoH);
-        $("#day-three").append(dayThree, dayThreeH);
-        $("#day-four").append(dayFour, dayFourH);
-        $("#day-five").append(dayFive, dayFiveH);
+        var dayOne = $("<p>").text("Temperature: " + response.daily[1].temp.day + "°F " + "Humidity: " + response.daily[1].humidity + "%");
+        var dayTwo = $("<p>").text("Temperature: " + response.daily[2].temp.day + "°F " + "Humidity: " + response.daily[2].humidity + "%");
+        var dayThree = $("<p>").text("Temperature: " + response.daily[3].temp.day + "°F " + "Humidity: " + response.daily[3].humidity + "%");
+        var dayFour = $("<p>").text("Temperature: " + response.daily[4].temp.day + "°F " + "Humidity: " + response.daily[4].humidity + "%");
+        var dayFive = $("<p>").text("Temperature: " + response.daily[5].temp.day + "°F " + "Humidity: " + response.daily[5].humidity + "%");
+        $("#date-one").append(tomorrow);
+        $("#date-two").append(tomorrow2);
+        $("#date-three").append(tomorrow3);
+        $("#date-four").append(tomorrow4);
+        $("#date-five").append(tomorrow5);
+        $("#day-one").append(dayOne);
+        $("#day-two").append(dayTwo);
+        $("#day-three").append(dayThree);
+        $("#day-four").append(dayFour);
+        $("#day-five").append(dayFive);
         $("#city-info").append(
           CurrentCity,
           currentTemp,
@@ -67,6 +79,7 @@ $(document).ready(function () {
   function clear() {
     $("#city-info").empty();
     $(".card-text").empty();
+    $(".card-header").empty();
   }
   $("#run-search").on("click", function (event) {
     event.preventDefault();
